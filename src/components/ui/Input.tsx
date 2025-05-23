@@ -10,7 +10,7 @@ const inputVariants = cva(
         error: "border-accent-red focus-visible:border-accent-red focus-visible:ring-accent-red/20",
         success: "border-green-500 focus-visible:border-green-500 focus-visible:ring-green-500/20",
       },
-      size: {
+      inputSize: {
         sm: "h-9 px-3 py-2 text-xs",
         default: "h-11 px-4 py-3 text-sm",
         lg: "h-12 px-4 py-3 text-base",
@@ -18,7 +18,7 @@ const inputVariants = cva(
     },
     defaultVariants: {
       variant: "default",
-      size: "default",
+      inputSize: "default",
     },
   }
 );
@@ -34,7 +34,7 @@ export interface InputProps
 }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, variant, size, label, error, success, leftIcon, rightIcon, type, ...props }, ref) => {
+  ({ className, variant, inputSize, label, error, success, leftIcon, rightIcon, type, ...props }, ref) => {
     const inputVariant = error ? "error" : success ? "success" : variant;
     
     return (
@@ -54,7 +54,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             type={type}
             className={inputVariants({ 
               variant: inputVariant, 
-              size, 
+              inputSize, 
               className: `${leftIcon ? 'pl-10' : ''} ${rightIcon ? 'pr-10' : ''} ${className}` 
             })}
             ref={ref}
