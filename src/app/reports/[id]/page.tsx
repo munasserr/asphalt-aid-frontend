@@ -292,17 +292,17 @@ export default function ReportDetailPage() {
                 <div className="space-y-3">
                   <div className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0">
                     <span className="text-gray-600">Report ID</span>
-                    <span className="font-medium">#{report.id}</span>
+                    <span className="text-gray-700 font-medium">#{report.id}</span>
                   </div>
                   
                   <div className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0">
                     <span className="text-gray-600">User ID</span>
-                    <span className="font-medium">#{report.user}</span>
+                    <span className="text-gray-700 font-medium">#{report.user}</span>
                   </div>
                   
                   <div className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0">
                     <span className="text-gray-600">Report Type</span>
-                    <span className="font-medium">{formatReportType(report.report_type)}</span>
+                    <span className="text-gray-700 font-medium">{formatReportType(report.report_type)}</span>
                   </div>
                   
                   <div className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0">
